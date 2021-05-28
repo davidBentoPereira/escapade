@@ -2,8 +2,7 @@
 
 class HomepageController < ApplicationController
 
-
   def index
-    @posts = Post.all.order(:created_at)
+    @posts = Post.where(status: 'pending').order(:created_at)
   end
 end
