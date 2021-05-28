@@ -1,5 +1,9 @@
+# frozen_string_literal: true
+
 class HomepageController < ApplicationController
+
+
   def index
-    @message = "Hello World !"
+    @posts = Post.all.order(:created_at)
   end
 end
