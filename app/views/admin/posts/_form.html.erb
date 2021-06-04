@@ -21,6 +21,11 @@
     <%= form.text_area :content %>
   </div>
 
+  <div class="field">
+    <%= @post.status %>
+    <%= form.select(:status, options_for_select([['pending'], ['rejected'], ['validated']],@post.status)) %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
