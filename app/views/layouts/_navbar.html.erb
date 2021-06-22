@@ -55,19 +55,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="nav">
         <li class="nav-item">
-          <%= link_to root_path do %>
-            <a type="button" class="nav-link active">Voir les nouvelles</a>
-          <% end %>
+          <%= link_to "Voir les nouvelles", root_path , :class => "nav-link", :style=> 'color:blue;'%>
         </li>
         <li class="nav-item">
-          <%= link_to new_post_path do %>
-            <a type="button" class="nav-link">Poster une nouvelle</a>
-          <% end %>
+            <%= link_to "Poster une nouvelle", new_post_path , :class => "nav-link", :style=> 'color:blue;'%>
         </li>
         <li class="nav-item">
-          <%= link_to admin_posts_path do %>
-            <a type="button" class="nav-link">Administrer les nouvelles</a>
-          <% end %>
+            <%= link_to "Administrer les nouvelles", admin_posts_path , :class => "nav-link", :style=> 'color:blue;'%>
         </li>
         <!--
         <li class="nav-item">
