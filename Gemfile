@@ -56,3 +56,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "devise", "~> 4.8"
 
 gem "rubocop-rails", "~> 2.10"
+
+gem "pry", "~> 0.14.1"

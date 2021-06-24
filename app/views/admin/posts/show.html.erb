@@ -9,12 +9,17 @@
   <strong>Content:</strong>
   <%= @post.content %>
 </p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @post.status %>
+</p>
+
 <p>
   <strong>Image:</strong>
   <% @post.images.each do |img|%>
   <li><a class="img-thumbnail"><span class="mgl-thumbnail-sizer"><%= image_tag img %></span></a></li>
 <% end %>
-</p>
 
 <%= link_to 'Edit', edit_admin_post_path(@post) %> |
 <%= link_to 'Back', admin_posts_path %>
