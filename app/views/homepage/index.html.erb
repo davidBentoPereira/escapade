@@ -14,10 +14,13 @@
             <div class="timeline__content">
               <h3><%= post.title %></h3>
               <p><%= post.content %></p>
-              <% if post.image.attached? == true %>
-                <p><%= image_tag post.image %></p>
+              <% if post.images.attached? %>
+                <ul class="mgl-galery">
+              <% post.images.each do |img|%>
+                    <li><a class="img-thumbnail"><span class="mgl-thumbnail-sizer"><%= image_tag img %></span></a></li>
               <% end %>
-
+              <% end %>
+              </ul>
               <h4><%= post.created_at.strftime("%d/%m/%Y") %></h4>
             </div>
           </div>
