@@ -9,6 +9,10 @@
   <strong>Content:</strong>
   <%= @post.content %>
 </p>
+<p>
+  <strong>Image:</strong>
+  <%= @post.image %>
+</p>
 
 <%= link_to 'Edit', edit_admin_post_path(@post) %> |
 <%= link_to 'Back', admin_posts_path %>

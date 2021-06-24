@@ -14,6 +14,10 @@
             <div class="timeline__content">
               <h3><%= post.title %></h3>
               <p><%= post.content %></p>
+              <% if post.image.attached? == true %>
+                <p><%= image_tag post.image %></p>
+              <% end %>
+
               <h4><%= post.created_at.strftime("%d/%m/%Y") %></h4>
             </div>
           </div>
