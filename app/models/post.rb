@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class Post < ApplicationRecord
+
+  has_many_attached :images
+
   PENDING = 'pending'
   REJECTED = 'rejected'
   VALIDATED = 'validated'
