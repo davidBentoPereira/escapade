@@ -1,3 +1,5 @@
+<div class="container">
+
 <%= form_with(model: @post, local: true) do |form| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -11,34 +13,6 @@
     </div>
   <% end %>
 
-<!--  ancien formulaire-->
-<!--  <div class="row justify-content-center">-->
-<!--    <div class="col-6">-->
-<!--      <div class="field">-->
-<!--        <label class="form-label" for="post_title">Titre de la nouvelle <small class="mgl-form-info">- obligatoire</small></label>-->
-        <%#= form.text_field :title, class: "form-control" %>
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-
-<!--  <div class="row justify-content-center">-->
-<!--    <div class="col-6">-->
-<!--      <div class="field">-->
-<!--        <label class="form-label" for="post_content">Texte de la nouvelle  <small class="mgl-form-info">- facultatif</small></label>-->
-        <%#= form.text_area :content, class: "form-control" %>
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-
-<!--  <div class="row justify-content-center">-->
-<!--    <div class="col-6 text-center">-->
-<!--      <button type="submit" class="btn btn-primary">Poster la nouvelle</button>-->
-<!--    </div>-->
-<!--  </div>-->
-
-
-<div class="container">
-
   <div class="text-center m-5">
     <h1 class="display-4">Poster une nouvelle</h1>
     <p class="mgl-small-screens-only mgl-blue">Toutes les informations sur le formulaire et ses données sont consignées en dessous du formulaire.</p>
@@ -46,8 +20,7 @@
 
   <main class="mx-5 mb-5">
     <div class="row align-items-start mgl-flip-column">
-      <div class="col-6">
-        <h2 class="mgl-big-screens-only">Poster une nouvelle</h2>
+      <div class="col-8">
         <form action="/posts" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="qv1959Jiq0mNCT72daxO+n1MSagjKO0hBsgzfA4jba67KsMPZXrrcp+OZ1A6a85TNlI+1zMyZJ+DX8gUjFFAxA==">
           <div class="field">
             <label class="form-label" for="post_title">Titre de la nouvelle <small class="mgl-form-info">- obligatoire</small></label>
@@ -55,7 +28,6 @@
           </div>
           <div class="field">
             <label class="form-label" for="post_content">Texte de la nouvelle  <small class="mgl-form-info">- facultatif</small></label>
-            <p style="color: red; font-weight: bold;">WYSIWYG ?</p>
             <%= form.text_area :content, class: "form-control" %>
           </div>
           <div class="field">
@@ -64,14 +36,19 @@
               <%= form.file_field :images, multiple: true, class: "form-control" %>
             <% end %>
           </div>
-          <div class="field">
-            <label class="form-label" for="post_title">Vidéo de la nouvelle  <small class="mgl-form-info">- facultative, maximum 1</small></label>
-            <p style="color: red; font-weight: bold;">En cours de développement</p>
-          </div>
-          <div class="field">
-            <label class="form-label" for="post_title">Document PDF la nouvelle <small class="mgl-form-info">- facultatif, maximum 1</small></label>
-            <p style="color: red; font-weight: bold;">En cours de développement</p>
-          </div>
+
+<!-- à développer DEBUT -->
+<!--      <div class="field"> -->
+<!--        <label class="form-label" for="post_title">Vidéo de la nouvelle  <small class="mgl-form-info">- facultative, maximum 1</small></label> -->
+<!--        <p style="color: red; font-weight: bold;">En cours de développement</p> -->
+<!--      </div> -->
+<!--      <div class="field"> -->
+<!--        <label class="form-label" for="post_title">Document PDF la nouvelle <small class="mgl-form-info">- facultatif, maximum 1</small></label> -->
+<!--        <p style="color: red; font-weight: bold;">En cours de développement</p> -->
+<!--      </div> -->
+<!-- à développer FIN -->
+
+
           <div class="field">
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -81,7 +58,7 @@
           <button type="submit" class="btn btn-primary">Poster la nouvelle</button>
         </form>
       </div>
-      <div class="col-6">
+      <div class="col-4">
         <h2>Pour poster une nouvelle</h2>
         <ul class="mgl-steps-form">
           <li><span class="mgl-steps-form__number">1</span><span> Vous remplissez les champs du formulaire</span></li>
@@ -99,5 +76,6 @@
       </div>
     </div>
   </main>
-</div>
 <% end %>
+
+</div>

@@ -14,10 +14,10 @@
   </head>
   <body>
     <%= render 'layouts/navbar' %>
-    <div class="container">
-      <%= yield %>
-      <%= render 'layouts/footer' %>
-    </div>
+    
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+
     <%= javascript_pack_tag 'timeline', 'data-turbolinks-track': 'reload' %>
   </body>
 

@@ -83,6 +83,10 @@ NAV
     height: 4em;
 }
 
+.mgl-main-nav {
+    flex-grow: 1;
+}
+
 .nav-link:visited {
     color: #0d6efd;
 }
@@ -97,14 +101,15 @@ THUMBNAILS
 ------------------------------------------------------------------------------------
 */
 
-.img-thumbnail {
+a.img-thumbnail {
+    color: #ffffff;
     text-decoration: none;
 }
 
 .mgl-thumbnail-sizer {
     display: block;
-    width: 7.5em;
-    height: 7.5em;
+    width: 6em;
+    height: 6em;
     overflow: hidden;
 }
 
@@ -133,6 +138,7 @@ GALERY
 */
 
 .mgl-galery {
+    list-style: none;
     padding-left: 0;
     display: flex;
     flex-wrap: wrap;
@@ -146,20 +152,57 @@ GALERY
 
 /*
 ------------------------------------------------------------------------------------
+OVERIDE BTN
+------------------------------------------------------------------------------------
+*/
+
+.btn.btn-primary:visited {
+    color: #ffffff;
+  }
+
+/*
+------------------------------------------------------------------------------------
 OVERIDE TIMELINE
 ------------------------------------------------------------------------------------
 */
 
-.timeline .card {
-    width: 20em;
+/* -- horizontal - DEBUT -- */
+
+#timeline-display-horizontal .timeline__item {
+    width: 320px !important;
 }
 
-.timeline ul li .content p {
-    padding: initial;
-    background-color: transparent;
-    margin: 0.25em 0;
-    text-align: initial;
-    border-radius: none;
+#timeline-display-horizontal .timeline__item.timeline__item--bottom {
+  margin-left: -150px;
+}
+
+#timeline-display-horizontal .timeline__item.timeline__item--top:not(:first-child) {
+  margin-left: -150px;
+}
+
+#timeline-display-horizontal .timeline__item--top .timeline__content::before {
+  border-top: 12px solid #0d6efd;
+}
+
+#timeline-display-horizontal .timeline__item--bottom .timeline__content::before {
+  border-bottom: 12px solid #0d6efd;
+}
+
+#timeline-display-horizontal .timeline__item.timeline__item--top .timeline__content::after {  display: none; }
+
+#timeline-display-horizontal .timeline__item.timeline__item--bottom .timeline__content::after {  display: none; }
+
+/* -- horizontal - FIN -- */
+
+.timeline__content {
+    padding: 0;
+    border-radius: 0.25em;
+    border-color: #0d6efd !important;
+}
+
+.timeline .card {
+    border: none !important;
+    border-radius: 0;
 }
 
 .card-body > * {
